@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # devkant
 
 ## Project setup
@@ -24,3 +25,4 @@ npm run test
 ```
 npm run lint
 ```
+# VueFirstProject
