@@ -1,10 +1,18 @@
 <template>
-    <h1>Hi Devkant!!!!!!!!!!</h1>
+   <div id="app">
+       <p>{{ message }}</p>
+       <input type="text" v-model="message">
+   </div>
 </template>
 
 <script>
 export default {
-    name: 'test'
+    name: 'test',
+    data: function(){
+        return {
+            message: ''
+        }
+    }
 };
 </script>
 
