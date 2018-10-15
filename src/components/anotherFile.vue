@@ -1,13 +1,12 @@
 <template>
-    <div>
-        <h1>Hello Devkant Welcome!</h1>
-    </div>
+<div>
+    <h1>AnotherFile</h1>
+</div>
 </template>
 
 <script>
-
 export default {
-  name: "newfile",
+  name: 'anotherFile'
 };
 </script>
 

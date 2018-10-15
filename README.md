@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # devkant
 
 ## Project setup

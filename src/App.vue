@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <newcomponent></newcomponent>
     <newfile/>
+    <anotherFile></anotherFile>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -11,12 +12,14 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import newcomponent from './components/newComponent.vue'
 import newfile  from  './components/Newfile.vue'
+import anotherFile from './components/anotherFile.vue';
 export default {
   name: 'app',
   components: {
     // HelloWorld,
     newcomponent,
-    newfile
+    newfile,    
+    anotherFile
   }
 }
 </script>
