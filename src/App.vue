@@ -1,25 +1,19 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <newcomponent></newcomponent>
-    <newfile/>
-    <anotherFile></anotherFile>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <test></test>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import newcomponent from './components/newComponent.vue'
-import newfile  from  './components/Newfile.vue'
-import anotherFile from './components/anotherFile.vue';
+import test from './components/test.vue';
 export default {
   name: 'app',
   components: {
-    // HelloWorld,
-    newcomponent,
-    newfile,    
-    anotherFile
+    // HelloWorld, 
+    test
   }
 }
 </script>

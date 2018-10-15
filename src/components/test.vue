@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <h1>Hello Devkant Welcome!</h1>
-    </div>
+    <h1>Hi Devkant!!!!!!!!!!</h1>
 </template>
 
 <script>
-
 export default {
-  name: "newfile",
+    name: 'test'
 };
 </script>
 
 <style>
+
 </style>
