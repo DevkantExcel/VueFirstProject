@@ -1,10 +1,19 @@
 <template>
    <div id="app">
-       <p v-bind:class="{red: isActive}">{{ message }}</p>
+       <p v-bind:style="{color: color_name.color}" >{{ message }}</p>
+
+       <!-- input type text, reset, caps, select ## buttons -->
        <input type="text" v-model="message">
        <input type="reset" name="clear" v-on:click="reset">
        <button v-on:click="caps" >Capital</button>
-       <input type="checkbox" v-on:click="isRed" :checked="isActive" v-model="isActive" /> RED
+
+       <select v-model="color_name">
+           <option v-bind:value="{color: 'red'}">Red</option>
+           <option v-bind:value="{color: 'blue'}">Blue</option>
+           <option v-bind:value="{color: 'black'}">Black</option>
+           <option v-bind:value="{color: 'yellow'}">Yellow</option>
+       </select>
+       
    </div>
 </template>
 
@@ -14,20 +23,10 @@ export default {
     data: function(){
         return {
             message: '',
-            isActive: false
+            color_name: {
+                color: 'black'
+            }
         }
-    },
-    created: function(){
-        console.log('Created!!!!');
-    },
-    mounted: function(){
-        console.log('Mounted!!!!');
-    },
-    updated: function(){
-        console.log('Updated!!!!');
-    },
-    destroyed: function(){
-        console.log('Destroyed!!!');
     },
     methods: {
         reset: function(){
@@ -36,17 +35,10 @@ export default {
         caps: function(){
             var cap = this.message.toUpperCase()
             this.message = cap
-        },
-        isRed: function(){
-            // eslint-disable-next-line
-            console.log(this.isRed)
         }
     }
 };
 </script>
 
 <style>
-    .red {
-        color: red;
-    }
 </style>
