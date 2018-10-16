@@ -1,16 +1,16 @@
 <template>
    <div id="app">
-       <p v-bind:style="{color: color_name.color}" >{{ message }}</p>
+       <p>type something.....</p>
+        <i>press enter</i>
+        <br />
 
-       <!-- input type text, reset, caps, select ## buttons -->
-       <input type="text" v-model="message">
-       <input type="reset" name="clear" v-on:click="reset">
-       <button v-on:click="caps" >Capital</button>
-
-       <select v-model="color_name">
-           <option v-for="(col, index) in colors" v-bind:key="index" v-bind:value="{color: col}">{{col}}</option>
-       </select>
-       
+        <form v-on:submit.prevent>
+            <input type="text" v-on:keypress="submit" v-model="name" autofocus>
+        </form>
+        
+        <ul>
+            <li v-for="(item, index) in data" v-bind:key="index" >{{ item }}</li>
+        </ul>
    </div>
 </template>
 
@@ -19,24 +19,24 @@ export default {
     name: 'test',
     data: function(){
         return {
-            message: '',
-            colors: ['red', 'blue', 'black', 'yellow'],
-            color_name: {
-                color: 'black'
-            }
+           name: '',
+           data:[],            
         }
     },
     methods: {
-        reset: function(){
-            this.message = ''
-        },
-        caps: function(){
-            var cap = this.message.toUpperCase()
-            this.message = cap
+        submit: function(e) {
+            if (e.keyCode === 13) {
+            this.data.push(this.name);
+            this.name = "";
+            }
         }
     }
 };
 </script>
 
 <style>
+    #app li {
+        border: 1px solid green;
+        padding: 5px;
+    }
 </style>
