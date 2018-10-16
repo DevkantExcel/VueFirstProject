@@ -15,6 +15,18 @@ export default {
             message: ''
         }
     },
+    created: function(){
+        console.log('Created!!!!');
+    },
+    mounted: function(){
+        console.log('Mounted!!!!');
+    },
+    updated: function(){
+        console.log('Updated!!!!');
+    },
+    destroyed: function(){
+        console.log('Destroyed!!!');
+    },
     methods: {
         reset: function(){
             this.message = ''
