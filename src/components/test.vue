@@ -8,10 +8,7 @@
        <button v-on:click="caps" >Capital</button>
 
        <select v-model="color_name">
-           <option v-bind:value="{color: 'red'}">Red</option>
-           <option v-bind:value="{color: 'blue'}">Blue</option>
-           <option v-bind:value="{color: 'black'}">Black</option>
-           <option v-bind:value="{color: 'yellow'}">Yellow</option>
+           <option v-for="(col, index) in colors" v-bind:key="index" v-bind:value="{color: col}">{{col}}</option>
        </select>
        
    </div>
@@ -23,6 +20,7 @@ export default {
     data: function(){
         return {
             message: '',
+            colors: ['red', 'blue', 'black', 'yellow'],
             color_name: {
                 color: 'black'
             }
