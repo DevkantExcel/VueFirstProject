@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <test></test> -->
-    <List></List>
+    <!-- <List></List> -->
+    <simpleform></simpleform>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import test from './components/test.vue';
-import List from './components/List.vue';
+// import List from './components/List.vue';
+import simpleform from './components/simpleform.vue';
 export default {
   name: 'app',
   components: {
     // HelloWorld, 
-    // test
-    List
-  }
+    // test,
+    // List,
+    simpleform
+  },
 }
 </script>
 
