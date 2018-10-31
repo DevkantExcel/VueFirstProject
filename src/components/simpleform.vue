@@ -60,6 +60,7 @@ import Vue from "vue";
             isActive: true,
             editIndex: false,
             pageNumber: 0,
+            id: 0,
         }
     },
     methods: {
@@ -112,6 +113,7 @@ import Vue from "vue";
             // return true
             // var peopleData = 'Name: '+this.name +', Email: '+ this.email +', Dob: '+ this.dob;
             this.arrForm.push({
+                id: this.id,
                 Name: this.name,
                 Email: this.email,
                 dob: this.dob
@@ -122,6 +124,7 @@ import Vue from "vue";
             this.password = null;
             this.confirmPassword = null;
             this.checked = false;
+            this.id++;
             } //first if ends here
         }
         },
@@ -136,8 +139,8 @@ import Vue from "vue";
             this.$delete(this.arrForm, index);
         },
         editItem: function(peeps, index) {
-            console.log(index, peeps.Name, peeps.Email, peeps.dob);
-            this.editIndex = index;
+            // console.log(index, peeps.Name, peeps.Email, peeps.dob);
+            this.editIndex = peeps.id;
             this.name = peeps.Name;
             this.email = peeps.Email;
             this.dob = peeps.dob;
@@ -165,7 +168,7 @@ import Vue from "vue";
         size:{
             type:Number,
             required:false,
-            default: 5
+            default: 2
         }
     },
     computed: {
