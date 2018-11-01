@@ -12,7 +12,7 @@ export default {
 name: 'TestNew',
 methods: {
     goHome: function() {
-        this.$router.push('/23')
+        this.$router.push('/')
     }
 }
 }
