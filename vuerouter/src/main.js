@@ -11,8 +11,8 @@ Vue.config.productionTip = false
 
 //code for router
 const routes = [
-  {path: "/", component: Test},
-  {path: '/TestNew',component: TestNew}
+  {path: "/:id", component: Test},
+  {path: '/TestNew/:id',component: TestNew}
 ]
 const router = new VueRouter({
   routes // short for `routes: routes`

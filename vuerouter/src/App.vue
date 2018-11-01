@@ -3,7 +3,9 @@
     
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <router-view></router-view>
-    <!-- <router-link to="/">Click</router-link> -->
+    <!-- <router-link to="/TestNew/id">/TestNew/id/</router-link> -->
+
+    <p>I am from app dot vue = {{ $route.params.id }} <--value from url</p>
     
   </div>
 </template>
