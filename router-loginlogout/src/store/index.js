@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import store from './modules/store'
-import createPersistedState from 'vuex-persistedstate'
-
-const debug = process.env.Node_ENV !== "production";
+import login from './modules/login'
+import createPersistedState from "vuex-persistedstate";
 Vue.use(Vuex)
-export default new Vuex.Store({
-    modules :{ //used to import files 
-        store
-    },
-    strict: debug,
-    plugins: [createPersistedState()]
-});
+ const debug = process.env.NODE_ENV !== 'production'
+ 
+ export default new Vuex.Store({
+  modules: {
+    login,
+  },
+  strict: debug,
+  plugins: [createPersistedState()]
+}) 

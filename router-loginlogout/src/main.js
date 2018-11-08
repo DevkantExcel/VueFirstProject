@@ -1,29 +1,27 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store' //added explicitely
-import VueRouter from 'vue-router' //added explicitly
-
-//import all the pages here as well
-import UserLogin from './components/UserLogin.vue';
-import UserProfile from './components/UserProfile.vue';
-
-
-Vue.use(VueRouter) //added explicitly
-
+import Login from './pages/Login.vue'
+import Home from './pages/Home.vue'
+import Profile from './pages/Profile.vue'
+import VueRouter from 'vue-router'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+import store from "./store"
+Vue.use(Buefy)
+Vue.use(VueRouter)
 Vue.config.productionTip = false
-
-//code for router added explicitly
 const routes = [
-  {path: '/UserLogin', component: UserLogin },
-  {path: '/UserProfile', component: UserProfile },
+  { 'path': '/', component: Home },
+  { 'path': '/login', component: Login },
+  { 'path': "/profile", component: Profile }
 ]
 const router = new VueRouter({
-  routes //short for `routes: routes`
-})
-
-new Vue({
-  router: router,
-  store,
-  render: h => h(App),
-  //store,
+   routes // short for `routes: routes`
+ })
+ 
+ 
+ new Vue({
+   router: router,
+   render: h => h(App),
+   store
 }).$mount('#app')
