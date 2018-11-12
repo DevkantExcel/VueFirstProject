@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <form @submit.prevent>
-      <!-- <input type="text" v-model="todo" >  -->
+      <!-- <input type="text" v-model="todo" >  #-->
       <p>Todo List Using Vuex</p>
       <div class="columns customWidth" >
         <div class="column is-11">
