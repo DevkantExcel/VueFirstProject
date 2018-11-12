@@ -1,5 +1,5 @@
 {
-  "name": "devkant",
+  "name": "vuestate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,12 +10,16 @@
   "dependencies": {
     "buefy": "^0.7.0",
     "vue": "^2.5.17",
-    "vuejs-paginate": "^2.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
