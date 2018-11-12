@@ -44,9 +44,10 @@ export default {
      },
      editItem: function(index) {
        // eslint-disable-next-line
-       console.log("edit index");
+      //  console.log("edit index");
        this.editIndex = index;
        this.name = this.data[index];
+       console.log(this.name);
      }
    }
  };
