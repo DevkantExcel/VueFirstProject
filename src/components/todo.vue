@@ -27,7 +27,12 @@
                 </thead>
                 <tbody>
                 <tr v-for="(todo, index) in todos" :key="index" :class="{strike : todo.active}" >
-                    <td> <b-checkbox type="checkbox is-success is-small" v-model="todo.active" @change.native="checkboxAlert(todo.active)"></b-checkbox> </td>
+                    <td> <b-checkbox 
+	                    	type="checkbox is-success is-small" 
+	                    	v-model="todo.active" 
+	                    	@change.native="checkboxAlert(todo.active)">                    		
+                    	</b-checkbox> 
+                    </td>
                     <td><span class="customFont" >{{ todo.name }}</span></td>
                     <td>{{ todo.date }}</td>
                     <td><span class="mdi mdi-square-edit-outline" @click="editItem(todo,index)" ></span></td>
